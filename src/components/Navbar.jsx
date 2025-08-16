@@ -62,7 +62,7 @@ function Navbar() {
                 <button
                     type="button"
                     onClick={() => logout()}
-                    className='border border-[#333333] py-2 px-4 cursor-pointer hover:bg-[#333333b1] duration-300 transition-all'
+                    className='border border-[#333333] py-1 px-2 md:py-2 md:px-4 text-xs md:text-sm cursor-pointer hover:bg-[#333333b1] duration-300 transition-all'
                 >
                     Sign Out
                 </button>

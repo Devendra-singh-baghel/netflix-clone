@@ -3,6 +3,7 @@ import assets from '../assets/assets'
 import { Link, useNavigate, useParams } from 'react-router';
 import { BASE_URL, IMAGE_BASE_URL, options } from '../envimport/baseUrl';
 import { IoPlayOutline } from "react-icons/io5";
+import ExpandableText from '../components/ExpandableText';
 
 
 function Movie() {
@@ -55,7 +56,7 @@ function Movie() {
                         />
 
                         <div>
-                            <h1 className='text-4xl font-bold mb-2'>{movie.title}</h1>
+                            <h1 className='text-xl md:text-4xl font-bold mb-2'>{movie.title}</h1>
                             <div className='flex items-center gap-4 mb-2'>
                                 <span>⭐ {movie.vote_average?.toFixed(1)}</span>
                                 <span>{movie.release_date}</span>
@@ -75,12 +76,14 @@ function Movie() {
                                 }
                             </div>
 
-                            <p className='max-w-2xl text-gray-200 text-xs'>{movie.overview}</p>
+                            <ExpandableText
+                                text={movie.overview}
+                            />
 
                             <button
                                 type='button'
                                 onClick={handlePlay}
-                                className='border-0 outline-0 py-1 px-2.5 md:py-3 md:px-4 mt-3 md:mt-4 inline-flex items-center gap-1.5 font-semibold bg-[#e50914] rounded-full cursor-pointer text-white text-[10px] md:text-[16px] hover:bg-[#d70610]'>
+                                className='border-0 outline-0 py-1 px-2.5 md:py-3 md:px-4 inline-flex items-center gap-1.5 font-semibold bg-[#e50914] rounded-full cursor-pointer text-white text-[10px] md:text-[16px] hover:bg-[#d70610]'>
 
                                 <IoPlayOutline size={20} />
                                 Watch Now

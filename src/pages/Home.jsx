@@ -5,6 +5,7 @@ import { IoPlayOutline } from "react-icons/io5";
 import { GoInfo } from "react-icons/go";
 import { Link, useNavigate } from 'react-router';
 import { BASE_URL, IMAGE_BASE_URL, options } from '../envimport/baseUrl'
+import ExpandableText from '../components/ExpandableText';
 
 function Home() {
 
@@ -13,7 +14,7 @@ function Home() {
     const [apiData, setApiData] = useState([]);
 
     const handlePlay = () => {
-        navigate(`/movie/${apiData.id}`);
+        navigate(`/movie/${apiData?.id}`);
     }
 
 
@@ -27,6 +28,7 @@ function Home() {
             .catch(err => console.error(err));
     }, []);
 
+    if (!apiData) return <p>Loading....</p>;
 
     return (
         <div className='home'>
@@ -34,7 +36,7 @@ function Home() {
 
             <div className="hero relative">
 
-                <Link to={`/movie/${apiData.id}`}>
+                <Link to={`/movie/${apiData?.id}`}>
                     <img
                         src={`${IMAGE_BASE_URL}` + apiData.backdrop_path}
                         alt="hero_banner"
@@ -45,7 +47,9 @@ function Home() {
                 <div className="hero-caption absolute bottom-0 w-full pl-[4%] lg:pl-[6%]">
                     <h1 className='text-xl md:text-4xl font-bold mb-2.5 lg:mb-7.5'>{apiData.original_title}</h1>
 
-                    <p className='max-w-[700px] mb-2.5 lg:mb-5 text-xs md:text-sm'>{apiData.overview}</p>
+                    <ExpandableText
+                        text={apiData.overview}
+                    />
 
                     <div className="hero-btns flex gap-2.5 mb-1 lg:mb-12">
                         <button

@@ -31,29 +31,29 @@ A **Netflix Clone** built with **React.js, Vite, Tailwind CSS, Firebase, and TMD
 ## Setup & Installation  
 
 1. **Clone repo**  
-- git clone https://github.com/Devendra-singh-baghel/netflix-clone.git
-- cd netflix-clone
+    - git clone https://github.com/Devendra-singh-baghel/netflix-clone.git
+    - cd netflix-clone
 
 2. **Install dependencies**  
-- npm install
+    - npm install
 
 3. **Create .env file**
 
-- **Add your Firebase + TMDB API keys**:
+    - **Add your Firebase + TMDB API keys**:
 
-- VITE_FIREBASE_API_KEY=your_api_key
-- VITE_FIREBASE_AUTH_DOMAIN=your_project.firebaseapp.com
-- VITE_FIREBASE_PROJECT_ID=your_project_id
-- VITE_FIREBASE_STORAGE_BUCKET=your_project.appspot.com
-- VITE_FIREBASE_MESSAGING_SENDER_ID=your_sender_id
-- VITE_FIREBASE_APP_ID=your_app_id
-- VITE_TMDB_ACCESS_TOKEN=your_tmdb_access_token
+    - VITE_FIREBASE_API_KEY=your_api_key
+    - VITE_FIREBASE_AUTH_DOMAIN=your_project.firebaseapp.com
+    - VITE_FIREBASE_PROJECT_ID=your_project_id
+    - VITE_FIREBASE_STORAGE_BUCKET=your_project.appspot.com
+    - VITE_FIREBASE_MESSAGING_SENDER_ID=your_sender_id
+    - VITE_FIREBASE_APP_ID=your_app_id
+    - VITE_TMDB_ACCESS_TOKEN=your_tmdb_access_token
 
 4. **Run development server**
-- npm run dev
+    - npm run dev
 
 5. **Build for production**
-- npm run build
+    - npm run build
 
 ---
 
